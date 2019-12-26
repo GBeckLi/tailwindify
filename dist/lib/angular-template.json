@@ -1,0 +1,27 @@
+{
+    "architect": {
+        "build": {
+            "builder": "@angular-builders/custom-webpack:browser",
+            "options": {
+                "customWebpackConfig": {
+                    "path": "./webpack.config.dev.js"
+                }
+            },
+            "configurations": {
+                "production": {
+                    "customWebpackConfig": {
+                        "path": "./webpack.config.prod.js"
+                    }
+                }
+            }
+        },
+        "serve": {
+            "builder": "@angular-builders/custom-webpack:dev-server",
+            "options": {
+                "customWebpackConfig": {
+                    "path": "./webpack.config.dev.js"
+                }
+            }
+        }
+    }
+}
