@@ -1,12 +1,12 @@
 {
   "name": "tailwindify",
-  "version": "1.0.8",
-  "main": "./dist/bin/index.js",
+  "version": "1.0.10",
+  "main": "./bin/index.js",
   "license": "MIT",
   "author": "beck.lee",
   "description": "一键配置tailwindcss环境的命令行工具",
   "bin": {
-    "twify": "./dist/bin/index.js"
+    "twify": "./bin/index.js"
   },
   "keywords": [
     "tailwindcss",

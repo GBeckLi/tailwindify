@@ -1,11 +1,20 @@
 {
   "name": "tailwindify",
-  "version": "1.0.3",
+  "version": "1.0.10",
   "main": "./dist/bin/index.js",
   "license": "MIT",
+  "author": "beck.lee",
+  "description": "一键配置tailwindcss环境的命令行工具",
   "bin": {
     "twify": "./dist/bin/index.js"
   },
+  "keywords": [
+    "tailwindcss",
+    "angular",
+    "typescript",
+    "cli",
+    "node"
+  ],
   "scripts": {
     "build:prod": "./node_modules/.bin/ts-node ./bin/build.ts",
     "build": "./node_modules/.bin/webpack --config webpack.config.js",
@@ -14,9 +23,6 @@
     "tsc": "tsc -p .",
     "refresh": "rm -rf ./node_modules ./package-lock.json ./yarn.lock && yarn install"
   },
-  "files": [
-    "./dist"
-  ],
   "devDependencies": {
     "@types/chalk": "^2.2.0",
     "@types/clear": "^0.1.0",
