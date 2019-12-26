@@ -3,11 +3,11 @@ import path from 'path';
 
 const removeShell = `
   yarn remove tailwindcss -S
-  yarn remove postcss-import
-  yarn remove postcss-loader
-  yarn remove postcss-scss
-  yarn remove @angular-builders/custom-webpack
-  yarn remove @fullhuman/postcss-purgecss
+  yarn remove postcss-import -D
+  yarn remove postcss-loader -D
+  yarn remove postcss-scss -D
+  yarn remove @angular-builders/custom-webpack -S
+  yarn remove @fullhuman/postcss-purgecss -D
 `;
 
 function uninstallDependencies(): void {
@@ -26,6 +26,6 @@ function removeWebpackConfig(): void {
 }
 
 export function remove(): void {
-  // uninstallDependencies();
+  uninstallDependencies();
   removeWebpackConfig();
 }
