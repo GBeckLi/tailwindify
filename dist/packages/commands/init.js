@@ -33,13 +33,13 @@ function rewriteAngularJson() {
     }
     var json = JSON.parse(content);
     var projectName = json.defaultProject;
-    json.projects[projectName].architect = util_1.deepAssign(json.projects[projectName].architect, angular_template_json_1.default.architect);
+    json.projects[projectName].architect = util_1.deepAssign(angular_template_json_1.default.architect, json.projects[projectName].architect);
     new shelljs_1.ShellString(JSON.stringify(json, null, 2)).to(angularJson);
 }
 function rewriteStyle() {
     var styleTemplate = path_1.default.join(__dirname, '../templates/style.template');
     var styleFiles = shelljs_1.default.find(path_1.default.resolve('./src'))
-        .filter(function (file) { return file.match(/style\.(scss|less|css)$/); });
+        .filter(function (file) { return file.match(/styles\.(scss|less|css)$/); });
     styleFiles.forEach(function (file) {
         shelljs_1.default.cat(styleTemplate, file).to(file);
     });

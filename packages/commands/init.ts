@@ -36,8 +36,8 @@ function rewriteAngularJson(): void {
   const json = JSON.parse(content);
   const projectName = json.defaultProject;
   json.projects[projectName].architect = deepAssign(
-    json.projects[projectName].architect,
     angularTemplateJson.architect,
+    json.projects[projectName].architect,
   );
   new ShellString(JSON.stringify(json, null, 2)).to(angularJson);
 }
@@ -45,7 +45,7 @@ function rewriteAngularJson(): void {
 function rewriteStyle(): void {
   const styleTemplate = path.join(__dirname, '../templates/style.template');
   const styleFiles = shell.find(path.resolve('./src'))
-    .filter((file) => file.match(/style\.(scss|less|css)$/));
+    .filter((file) => file.match(/styles\.(scss|less|css)$/));
   styleFiles.forEach((file) => {
     shell.cat(styleTemplate, file).to(file);
   });
