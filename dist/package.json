@@ -1,0 +1,26 @@
+{
+  "name": "tailwindify",
+  "version": "1.0.5",
+  "main": "./dist/bin/index.js",
+  "license": "MIT",
+  "author": "beck.lee",
+  "description": "一键配置tailwindcss环境的命令行工具",
+  "bin": {
+    "twify": "./dist/bin/index.js"
+  },
+  "keywords": [
+    "tailwindcss",
+    "angular",
+    "typescript",
+    "cli",
+    "node"
+  ],
+  "dependencies": {
+    "chalk": "^3.0.0",
+    "clear": "^0.1.0",
+    "commander": "^4.0.1",
+    "figlet": "^1.2.4",
+    "inquirer": "^7.0.1",
+    "shelljs": "^0.8.3"
+  }
+}
