@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 import commander from 'commander';
-import { init } from '../packages/commands/init/init';
-import { remove } from '../packages/commands/remove/remove';
+import { init } from '../packages/commands/init';
+import { remove } from '../packages/commands/remove';
 
 const program = new commander.Command();
 

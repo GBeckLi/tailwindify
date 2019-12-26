@@ -1,10 +1,10 @@
 import shell, { ShellString } from 'shelljs';
 import path from 'path';
 import chalk from 'chalk';
-import angularTemplateJson from '../../../lib/angular-template.json';
+import angularTemplateJson from '../../lib/angular-template.json';
 import {
   deepAssign,
-} from '../../../lib/util';
+} from '../../lib/util';
 
 const initShell = `
   yarn add tailwindcss@latest -S
@@ -43,7 +43,7 @@ function rewriteAngularJson(): void {
 }
 
 function rewriteStyle(): void {
-  const styleTemplate = path.join(__dirname, '../../lib/style.template');
+  const styleTemplate = path.join(__dirname, '../templates/style.template');
   const styleFiles = shell.find(path.resolve('./src'))
     .filter((file) => file.match(/style\.(scss|less|css)$/));
   styleFiles.forEach((file) => {
@@ -52,17 +52,17 @@ function rewriteStyle(): void {
 }
 
 function writeWebpackConfig(): void {
-  const webpackDevConfig = path.join(__dirname, '../../lib/webpack.config.dev.template');
-  const webpackProdConfig = path.join(__dirname, '../../lib/webpack.config.prod.template');
+  const webpackDevConfig = path.join(__dirname, '../templates/webpack.config.dev.template');
+  const webpackProdConfig = path.join(__dirname, '../templates/webpack.config.prod.template');
   shell.cat(webpackDevConfig).to(path.resolve('./webpack.config.dev.js'));
   shell.cat(webpackProdConfig).to(path.resolve('./webpack.config.prod.js'));
 }
 
 
 export function init(): void {
-  // shell.echo(chalk.red('Install dependencies ---'));
-  // installDependencies();
-  // rewriteAngularJson();
-  // writeWebpackConfig();
+  shell.echo(chalk.red('Install dependencies ---'));
+  installDependencies();
+  rewriteAngularJson();
+  writeWebpackConfig();
   rewriteStyle();
 }
