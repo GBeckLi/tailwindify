@@ -14,6 +14,9 @@
     "tsc": "tsc -p .",
     "refresh": "rm -rf ./node_modules ./package-lock.json ./yarn.lock && yarn install"
   },
+  "files": [
+    "./dist"
+  ],
   "devDependencies": {
     "@types/chalk": "^2.2.0",
     "@types/clear": "^0.1.0",
@@ -24,23 +27,16 @@
     "@types/shelljs": "^0.8.6",
     "@typescript-eslint/eslint-plugin": "^2.12.0",
     "@typescript-eslint/parser": "^2.12.0",
-    "clean-webpack-plugin": "^3.0.0",
     "eslint": "^6.7.2",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.19.1",
-    "file-loader": "^5.0.2",
     "nodemon": "^2.0.2",
-    "shebang-loader": "^0.0.1",
     "ts-loader": "^6.2.1",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.3",
-    "typescript-cli": "^0.1.0",
-    "url-loader": "^3.0.0",
-    "webpack": "^4.41.4",
-    "webpack-cli": "^3.3.10"
+    "typescript-cli": "^0.1.0"
   },
   "dependencies": {
-    "autoprefixer": "^9.7.3",
     "chalk": "^3.0.0",
     "clear": "^0.1.0",
     "commander": "^4.0.1",

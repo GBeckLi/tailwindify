@@ -2,12 +2,13 @@ import shell, { ShellString } from 'shelljs';
 import path from 'path';
 
 const removeShell = `
-  yarn remove tailwindcss -S
-  yarn remove postcss-import -D
-  yarn remove postcss-loader -D
-  yarn remove postcss-scss -D
-  yarn remove @angular-builders/custom-webpack -S
-  yarn remove @fullhuman/postcss-purgecss -D
+  yarn remove tailwindcss
+  yarn remove postcss-import
+  yarn remove postcss-loader
+  yarn remove postcss-scss
+  yarn remove autoprefixer
+  yarn remove @angular-builders/custom-webpack
+  yarn remove @fullhuman/postcss-purgecss
 `;
 
 function uninstallDependencies(): void {
