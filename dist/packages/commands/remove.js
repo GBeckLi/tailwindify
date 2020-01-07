@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var shelljs_1 = __importDefault(require("shelljs"));
 var path_1 = __importDefault(require("path"));
-var removeShell = "\n  yarn remove tailwindcss\n  yarn remove postcss-import\n  yarn remove postcss-loader\n  yarn remove postcss-scss\n  yarn remove autoprefixer\n  yarn remove @angular-builders/custom-webpack\n  yarn remove @fullhuman/postcss-purgecss\n";
+var removeShell = "\n  npm remove tailwindcss\n  npm remove postcss-import\n  npm remove postcss-loader\n  npm remove postcss-scss\n  npm remove autoprefixer\n  npm remove @angular-builders/custom-webpack\n  npm remove @fullhuman/postcss-purgecss\n";
 function uninstallDependencies() {
     var res = shelljs_1.default.exec(removeShell);
     if (res.code !== 0) {

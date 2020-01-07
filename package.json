@@ -1,6 +1,6 @@
 {
   "name": "tailwindify",
-  "version": "1.0.10",
+  "version": "1.0.12",
   "main": "./dist/bin/index.js",
   "license": "MIT",
   "author": "beck.lee",
@@ -8,6 +8,7 @@
   "bin": {
     "twify": "./dist/bin/index.js"
   },
+  "repository": "https://github.com/GBeckLi/tailwindify",
   "keywords": [
     "tailwindcss",
     "angular",
@@ -16,12 +17,15 @@
     "node"
   ],
   "scripts": {
-    "build:prod": "./node_modules/.bin/ts-node ./bin/build.ts",
-    "build": "./node_modules/.bin/webpack --config webpack.config.js",
+    "build": "./node_modules/.bin/ts-node ./bin/build.ts",
+    "build:start": "yarn run build && node ./dist/bin/index.js",
     "watch": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' ./index.ts",
     "start": "./node_modules/.bin/ts-node ./bin/index.ts",
     "tsc": "tsc -p .",
-    "refresh": "rm -rf ./node_modules ./package-lock.json ./yarn.lock && yarn install"
+    "refresh": "rm -rf ./node_modules ./package-lock.json ./yarn.lock && yarn install",
+    "local:link": "yarn run build && yarn link",
+    "local:run": "./node_modules/.bin/ts-node",
+    "publish": "yarn run build && yarn publish ./dist --registry http://registry.npmjs.org"
   },
   "devDependencies": {
     "@types/chalk": "^2.2.0",

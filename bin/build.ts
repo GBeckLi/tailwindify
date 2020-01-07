@@ -12,7 +12,6 @@ function tsc(): void {
 
 function copyTemplates(): void {
   // 拷贝模板文件
-  shell.echo(chalk.green('开始拷贝模板文件!'));
   const sourcePath = path.join(__dirname, '../packages/templates');
   const targetPath = path.join(__dirname, '../dist/packages/templates/');
 

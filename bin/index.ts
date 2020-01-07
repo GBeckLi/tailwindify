@@ -3,6 +3,7 @@
 import commander from 'commander';
 import { init } from '../packages/commands/init';
 import { remove } from '../packages/commands/remove';
+import { test } from '../packages/commands/test';
 
 const program = new commander.Command();
 
@@ -16,5 +17,9 @@ program.command('init')
 program.command('remove')
   .description('remove tailwindcss dependencies')
   .action(remove);
+
+program.command('test')
+  .description('Test')
+  .action(test);
 
 program.parse(process.argv);
