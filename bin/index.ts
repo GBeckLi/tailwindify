@@ -8,7 +8,7 @@ import { test } from '../packages/commands/test';
 const program = new commander.Command();
 
 program
-  .version('0.0.1', '-v, --version');
+  .version('1.0.15', '-v, --version');
 
 program.command('init')
   .description('initialize your tailwindcss project')
