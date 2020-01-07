@@ -12,7 +12,7 @@ var angularJson = path_1.default.resolve('./angular.json');
 function rewriteAngularJson() {
     return new Promise(function (resolve) {
         var angularConfig = utils_1.getAngularConfig();
-        var projectName = utils_1.getTargetProjectName() || angularConfig.defaultProject;
+        var projectName = utils_1.getTargetProjectName();
         angularConfig.projects[projectName].architect = util_1.deepAssign(angular_template_json_1.default.architect, angularConfig.projects[projectName].architect);
         new shelljs_1.ShellString(JSON.stringify(angularConfig, null, 2)).to(angularJson);
         resolve();

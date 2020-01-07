@@ -73,7 +73,7 @@ function choiceProject() {
                 case 0:
                     projects = getProjects();
                     names = Object.keys(projects);
-                    if (!(names.length > 1)) return [3 /*break*/, 4];
+                    if (!(names.length > 1)) return [3 /*break*/, 5];
                     _a.label = 1;
                 case 1:
                     _a.trys.push([1, 3, , 4]);
@@ -93,7 +93,11 @@ function choiceProject() {
                     e_1 = _a.sent();
                     console.log(e_1);
                     return [3 /*break*/, 4];
-                case 4: return [2 /*return*/];
+                case 4: return [3 /*break*/, 6];
+                case 5:
+                    targetProjectName = names[0] || angularJson.defaultProject;
+                    _a.label = 6;
+                case 6: return [2 /*return*/];
             }
         });
     });

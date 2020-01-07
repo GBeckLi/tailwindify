@@ -1,6 +1,6 @@
 {
   "name": "tailwindify",
-  "version": "1.0.12",
+  "version": "1.0.15",
   "main": "./bin/index.js",
   "license": "MIT",
   "author": "beck.lee",
